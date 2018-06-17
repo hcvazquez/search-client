@@ -1,0 +1,19 @@
+/* Layout
+   ========================================================================== */
+
+html,
+body {
+    min-width: 320px;
+    height: 100%;
+    margin: 0;
+    background-color: #f7f7f6;
+}
+
+body {
+    position: relative;  /* Necessary so that descendants with 100% actually target body width */
+    overflow-y: scroll;  /* Prevent screen from "dancing" when going from a page to another */
+}
+
+* {
+    box-sizing: border-box;
+}

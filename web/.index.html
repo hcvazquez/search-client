@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>npms</title>
+        <meta name="description" content="npms was built to empower the javascript community by providing a better and open sourced search for node modules.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Fonts -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
+        <link href='https://fonts.googleapis.com/css?family=Oleo+Script:700' rel='stylesheet' type='text/css'>
+
+        <% if (env !== 'dev') { %>
+        <!-- App stylesheet -->
+        <link rel="stylesheet" href="<%= parameters.publicPath %>/app.<%= hash %>.css">
+
+        <!-- Open search -->
+        <link title="npms.io" type="application/opensearchdescription+xml" href="https://npms.io/opensearch.xml" rel="search">
+        <% } %>
+    </head>
+    <body>
+        <!-- Root element where app goes -->
+        <div id="root"></div>
+
+        <!-- Load app main file -->
+        <script src="<%= parameters.publicPath %>/main<%= hash ? '.' + hash : '' %>.js"></script>
+
+        <!-- Outdated browser -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.3/outdatedbrowser.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.3/outdatedbrowser.min.js"></script>
+        <div id="outdated">
+            <h6>Your browser is out-of-date!</h6>
+            <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">Update my browser now </a></p>
+            <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+        </div>
+        <script>
+        window.onload = function () {
+            outdatedBrowser({
+                bgColor: '#f25648',
+                color: '#ffffff',
+                lowerThan: 'borderImage',
+                languagePath: ''
+            });
+        };
+        </script>
+
+        <% if (env === 'prod') { %>
+        <!-- Google analytics -->
+        <script>
+        (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+        function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+        e.src='https://www.google-analytics.com/analytics.js';r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+        ga('create','<%= parameters.googleAnalyticsId %>','auto');ga('send','pageview');
+        </script>
+
+        <!-- Add search box to google: https://developers.google.com/structured-data/slsb-overview#markup_examples -->
+        <script type="application/ld+json">
+        {
+          "@context": "http://schema.org",
+          "@type": "WebSite",
+          "url": "http://api-rank-api-rank.1d35.starter-us-east-1.openshiftapps.com/",
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": "http://api-rank-api-rank.1d35.starter-us-east-1.openshiftapps.com/search?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+          }
+        }
+        </script>
+        <% } %>
+    </body>
+</html>

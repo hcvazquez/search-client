@@ -1,0 +1,28 @@
+.tooltip-component {
+    position: absolute;
+    max-width: calc(100% - 20px);  /* Compensate for edges, see util/checkEdges.js */
+    z-index: 1070;
+}
+
+.tooltip-component.tooltip-component-hidden {
+    display: none;
+}
+
+.tooltip-component .tooltip-component-arrow {
+    position: absolute;
+}
+
+/* Text inside
+   ========================================================================== */
+
+.tooltip-component p {
+    margin: 5px 0;
+}
+
+.tooltip-component p:first-child {
+    margin-top: 0;
+}
+
+.tooltip-component p:last-child {
+    margin-bottom: 0;
+}

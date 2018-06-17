@@ -1,0 +1,48 @@
+.page-search {
+    width: 100%;
+    min-height: 100%;
+    background-color: #f7f7f6;
+}
+
+/* List header
+   ========================================================================== */
+
+.page-search .results-list {
+    position: relative;
+    z-index: 1;
+}
+
+.page-search .header-component {
+    position: relative;
+    z-index: 3;
+}
+
+/* Scroll to top
+   ========================================================================== */
+
+.page-search .scroll-to-top {
+    position: fixed;
+    top: 30px;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.page-search .scroll-to-top .scroll-to-top-component {
+    position: absolute;
+    top: 0;
+    right: -50px;
+    pointer-events: auto;
+}
+
+/* Media queries
+   ========================================================================== */
+
+@media (max-width: 850px) {
+    .page-search .scroll-to-top {
+        top: 20px;
+    }
+
+    .page-search .scroll-to-top .scroll-to-top-component {
+        right: 0;
+    }
+}

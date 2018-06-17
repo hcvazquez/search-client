@@ -1,0 +1,42 @@
+/* Summary
+   ========================================================================== */
+
+.page-search .results-list .summary {
+    height: 30px;
+    margin-bottom: 30px;
+    background-color: #ededeb;
+    color: #939292;
+    font-size: 14px;
+    font-weight: 500;
+    font-style: italic;
+    line-height: 30px;
+}
+
+.page-search .results-list .summary .nr-results {
+    font-weight: 900;
+}
+
+/* Items list
+   ========================================================================== */
+
+.page-search .results-list .items {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0 0 75px 0;
+    list-style: none;
+}
+
+/* Modifiers
+   ========================================================================== */
+
+.page-search .results-list.has-no-results span {
+    font-weight: 500;
+}
+
+.page-search .results-list.has-error .error {
+    margin-top: 25px;
+}
+
+.page-search .results-list.has-error .error .message {
+    font-size: 14px;
+}

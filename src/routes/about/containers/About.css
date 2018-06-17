@@ -1,0 +1,239 @@
+.page-about {
+    width: 100%;
+    min-height: 100%;
+    background-color: #f7f7f6;
+}
+
+.page-about .header-component {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+/* Page header
+   ========================================================================== */
+
+.page-about .page-header {
+    position: relative;
+    width: 100%;
+    padding: 50px 40px;
+    background-color: #35405b;
+    color: #fff;
+    font-family: "Oleo Script", cursive;
+    font-size: 80px;
+    text-align: center;
+}
+
+.page-about .page-header::after {
+    content: "";
+    position: absolute;
+    bottom: -22px;
+    left: 50%;
+    width: 0;
+    height: 0;
+    margin-left: -22px;
+    border-style: solid;
+    border-color: transparent;
+    border-right-width: 28px;
+    border-left-width: 28px;
+    border-top-width: 22px;
+    border-bottom-width: 0;
+    border-top-color: #35405b;
+}
+
+/* Page content
+   ========================================================================== */
+
+.page-about .page-content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 42px 20px;  /* 42 because arrow is 22px */
+}
+
+.page-about .page-content h1,
+.page-about .page-content strong,
+.page-about .page-content .highlight {
+    color: #35405b;
+}
+
+.page-about .page-content h1 {
+    margin-top: 1.4em;
+}
+
+/* Pseudo-section "Headline"
+   ========================================================================== */
+
+.page-about .section-headline {
+    margin-bottom: 50px;
+    padding: 0 50px;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+/* Section "How it works"
+   ========================================================================== */
+
+.page-about .section-how-it-works .aspect {
+    width: calc((100% - 40px) / 2);
+    margin: 20px 40px 20px 0;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.page-about .section-how-it-works .aspect:nth-child(even) {
+    margin-right: 0;
+}
+
+.page-about .section-how-it-works .aspect i {
+    display: block;
+    font-size: 50px;
+    text-align: center;
+}
+
+.page-about .section-how-it-works .aspect .name {
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.page-about .section-how-it-works .aspect .description {
+    margin-top: 30px;
+    clear: both;
+}
+
+.page-about .section-how-it-works .aspect .examples {
+    margin: 30px 0 0 0;
+    padding-left: 15px;
+    font-size: 14px;
+}
+
+/* Authors
+   ========================================================================== */
+
+.page-about .section-sponsors h1 {
+    margin-bottom: 30px;
+}
+
+.page-about .section-sponsors .sponsor {
+    margin: 30px 0 30px 0;
+}
+
+.page-about .section-sponsors .sponsor .logo {
+    width: 200px;
+    margin-right: 30px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.page-about .section-sponsors .sponsor .logo img {
+    width: 100%;
+}
+
+.page-about .section-sponsors .sponsor .description {
+    width: calc(100% - 230px);
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.page-about .section-sponsors .contact-us {
+    margin-top: 30px;
+}
+
+/* Authors
+   ========================================================================== */
+
+.page-search .section-authors {
+    overflow: hidden; /* Necessary because of the translate -50% on IE */
+}
+
+.page-about .section-authors h1 {
+    margin-bottom: 30px;
+}
+
+.page-about .section-authors .authors-list {
+    position: relative;
+    left: calc(50% + 25px);
+    margin: 0 auto;
+    transform: translateX(-50%);
+    display: inline-block;
+}
+
+.page-about .section-authors .authors-list .author {
+    margin-right: 50px;
+    display: inline-block;
+    text-align: center;
+}
+
+.page-about .section-authors .authors-list .author .avatar {
+    margin-bottom: 10px;
+    border-radius: 50%;
+}
+
+.page-about .section-authors .authors-list .author .name {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.page-about .section-authors .authors-list .author .links a {
+    margin-right: 10px;
+}
+
+.page-about .section-authors .authors-list .author .links a:last-of-type {
+    margin-right: 0;
+}
+
+.page-about .section-authors .authors-list .author .links svg {
+    fill: #7c7a79;
+}
+
+.page-about .section-authors .authors-list .author .links a:hover svg {
+    fill: #35405b;
+}
+
+.page-about .section-authors .special-thanks {
+    margin-top: 50px;
+}
+
+/* Media queries
+   ========================================================================== */
+
+@media (max-width: 450px) {
+    .page-about .section-authors .authors-list .author .avatar {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@media (max-width: 350px) {
+    .page-about .section-authors .authors-list .author .avatar {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+@media (max-width: 700px) {
+    .page-about .section-headline {
+        padding: 0;
+    }
+
+    .page-about .section-sponsors .sponsor .logo {
+        width: calc(100% - 100px);
+        min-width: 250px;
+        max-width: 300px;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .page-about .section-sponsors .sponsor .description {
+        width: 100%;
+        margin-top: 20px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 750px) {
+    .page-about .section-how-it-works .aspect {
+        width: 100%;
+        margin: 25px 0 25px 0;
+        display: block;
+    }
+}

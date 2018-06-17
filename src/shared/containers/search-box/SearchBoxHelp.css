@@ -1,0 +1,33 @@
+.search-box-help-component i {
+    padding: 5px;
+    color: #a1a1a1;
+    font-size: 16px;
+}
+
+/* Tooltip
+   ========================================================================== */
+
+.search-box-help-component-tooltip ul {
+    margin: 15px 0;
+    padding: 0;
+    list-style: none;
+}
+
+.search-box-help-component-tooltip ul li {
+    margin-bottom: 5px;
+}
+
+/* Media queries
+   ========================================================================== */
+
+@media (max-width: 374px) {
+    .search-box-help-component {
+        display: none;
+    }
+}
+
+@media (min-width: 420px) {
+    .tooltip-component.search-box-help-component-tooltip {
+        max-width: 400px;
+    }
+}

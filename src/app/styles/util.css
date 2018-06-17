@@ -1,0 +1,20 @@
+/* Utility class to disable css transitions
+   ========================================================================== */
+
+.disable-transition,
+.disable-transition::before,
+.disable-transition::after,
+.disable-transition *,
+.disable-transition *::before,
+.disable-transition *::after {
+    transition: none !important;
+}
+
+/* Utility class to clear children floats
+   ========================================================================== */
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}

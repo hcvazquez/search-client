@@ -1,0 +1,6 @@
+node_modules
+npm-debug.*
+/config/parameters.json
+/web/index.html
+/web/build
+.idea/

@@ -1,0 +1,138 @@
+.header-component {
+    box-sizing: content-box;
+    width: 100%;
+    height: 80px;
+    display: table;
+    table-layout: fixed;
+    background-color: #35405b;
+    color: #fff;
+}
+
+.header-component > * {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.header-component .logo {
+    width: 20px;
+    padding-left: 20px;
+    font-family: "Oleo Script", cursive;
+    font-size: 36px;
+}
+
+.header-component.has-logo .logo {
+    width: 130px;
+}
+
+.header-component .logo a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.header-component .search-box .search-box-component {
+    max-width: 700px;
+}
+
+.header-component .other-actions {
+    width: 160px;
+    text-align: right;
+    user-select: none;
+}
+
+.header-component .other-actions .toggle-menu {
+    margin-right: 17px;  /* Should be 20px but icon is centered */
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.header-component .other-actions .toggle-menu i {
+    cursor: pointer;
+}
+
+.header-component .other-actions .toggle-menu:hover {
+    color: #1dd09b;
+}
+
+.header-component .other-actions .social-link {
+    width: 24px;
+    height: 24px;
+    margin-right: 15px;
+    display: inline-block;
+    fill: #fff;
+}
+
+.header-component .other-actions .social-link:hover {
+    fill: #1dd09b;
+}
+
+/* Utility classes to be used by several pages
+   ========================================================================== */
+
+.header-component-align-with-search-box {
+    max-width: 700px;
+    margin-left: 20px;
+    margin-right: 160px;
+}
+
+.header-component-with-logo-align-with-search-box {
+    max-width: 700px;
+    margin-left: 130px;
+    margin-right: 160px;
+}
+
+.header-component-align-with-search-box-floated {
+    right: 160px;
+    left: 160px;
+    max-width: 700px;
+}
+
+.header-component-with-logo-align-with-search-box-floated {
+    right: 160px;
+    left: 130px;
+    max-width: 700px;
+}
+
+/* Media queries
+   ========================================================================== */
+
+@media (max-width: 850px) {
+    .header-component.has-search.has-logo .logo {
+        width: 20px;
+    }
+
+    .header-component.has-search.has-logo .logo > * {
+        display: none;
+    }
+
+    .header-component-align-with-search-box {
+        max-width: 670px;
+        margin-right: 20px;
+    }
+
+    .header-component-with-logo-align-with-search-box {
+        max-width: 670px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .header-component-align-with-search-box-floated {
+        right: 20px;
+        max-width: 670px;
+    }
+
+    .header-component-with-logo-align-with-search-box-floated {
+        right: 20px;
+        left: 20px;
+        max-width: 670px;
+    }
+}
+
+@media (max-width: 475px) {
+    .header-component.has-search .other-actions {
+        width: 70px;
+    }
+
+    .header-component.has-search .other-actions .social-link {
+        display: none;
+    }
+}
